@@ -1,0 +1,112 @@
+{
+    "data": {
+        "loginData": {
+            "userName": "a",
+            "password": "a1"
+        },
+        "user": [
+            {
+                "userName": "cheolsoo",
+                "name": "김철수",
+                "age": "10"
+            },
+            {
+                "userName": "younghee",
+                "name": "이영희",
+                "age": "21"
+            },
+            {
+                "userName": "minjoo",
+                "name": "황민주",
+                "age": "24"
+            },
+            {
+                "userName": "youngmo",
+                "name": "황영모",
+                "age": "23"
+            },
+            {
+                "userName": "chaeeon",
+                "name": "이채은",
+                "age": "22"
+            },
+            {
+                "userName": "haein",
+                "name": "정혜인",
+                "age": "30"
+            },
+            {
+                "userName": "eonjung",
+                "name": "송은정",
+                "age": "35"
+            },
+            {
+                "userName": "joowon",
+                "name": "정주원",
+                "age": "22"
+            },
+            {
+                "userName": "hyuntae",
+                "name": "조현태",
+                "age": "33"
+            },
+            {
+                "userName": "jihwan",
+                "name": "신지환",
+                "age": "22"
+            }
+        ],
+        "snack": [
+            {
+                "itemId": "1",
+                "itemName": "후레쉬파이",
+                "calories": "10"
+            },
+            {
+                "itemId": "2",
+                "itemName": "초코파이",
+                "calories": "20"
+            },
+            {
+                "itemId": "3",
+                "itemName": "찰떡파이",
+                "calories": "5"
+            },
+            {
+                "itemId": "4",
+                "itemName": "촉촉한 초코칩",
+                "calories": "30"
+            },
+            {
+                "itemId": "5",
+                "itemName": "칙촉",
+                "calories": "35"
+            },
+            {
+                "itemId": "6",
+                "itemName": "씨리얼",
+                "calories": "25"
+            },
+            {
+                "itemId": "7",
+                "itemName": "에이스",
+                "calories": "20"
+            },
+            {
+                "itemId": "8",
+                "itemName": "콘칩",
+                "calories": "30"
+            },
+            {
+                "itemId": "9",
+                "itemName": "콘쵸",
+                "calories": "50"
+            },
+            {
+                "itemId": "10",
+                "itemName": "몽쉘",
+                "calories": "60"
+            }
+        ]
+    }
+}

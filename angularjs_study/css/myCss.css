@@ -1,0 +1,67 @@
+.login-full-page{
+    background-color:pink;
+    height:950px;
+}
+.login-card{
+   width: 500px;
+}
+.main-header{
+    background-color: lightblue;
+}
+.main-aside{
+    padding:0.5em;
+}
+.main-section-list{
+}
+.main-section-details{
+}
+.toolbar{
+    padding:0.5em;
+}
+.list-table{
+    padding:1em;
+}
+.list-table-items{
+    width:1000px;
+}
+.icon{
+    padding:10px;
+}
+
+
+table.user_list.md-table th {
+    text-align: center!important;
+}
+/*
+table.user_list td.name {
+    color:blue;
+}
+
+table.md-table.user_list td.age.md-cell {
+    text-align: right!important;
+    padding-right:50px;
+}*/
+
+table.md-table.user_list td.md-cell:nth-child(even) {
+    text-align: right!important;
+    padding-right:50px;
+}
+
+table.md-table.user_list tbody tr:nth-child(odd) {
+    background-color:  #f0f0f5;
+}
+
+/**/
+
+table.snack_list.md-table th {
+    text-align: center!important;
+}
+
+table.md-table.snack_list td.md-cell:nth-child(even) {
+    text-align: right!important;
+    padding-right:50px;
+}
+
+table.md-table.snack_list tbody tr:nth-child(odd) {
+    background-color:  #f0f0f5;
+}

@@ -1,0 +1,40 @@
+<div layout="column" layout-align="center">
+    <md-toolbar class="md-hue-3" >
+        <div class="md-toolbar-tools">
+            <h2 flex md-truncate>Toolbar</h2>
+            <md-icon md-svg-src="icons/profile_icon.svg"></md-icon>
+            <md-input-container  class="icon">
+                <label>민주</label>
+                <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+                    <md-option ng-repeat="item in items" ng-value="item">
+                        {{item}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+    </md-toolbar>
+    <div layout="row">
+        <div flex="10" class="main-aside">
+            <md-sidemenu locked="true">
+                <md-sidemenu-group>
+                    <md-subheader class="md-no-sticky">메뉴</md-subheader>
+                    <!--<md-sidemenu-content md-heading="메뉴 열기">-->
+                        <div layout="row">
+                            <md-icon md-svg-src="icons/perm_identity_black_24dp.svg"></md-icon>
+                            <md-sidemenu-button ui-sref="app.users">사람</md-sidemenu-button>
+                        </div>
+                        <div layout="row">
+                            <md-icon md-svg-src="icons/snack_icon.svg"></md-icon>
+                            <md-sidemenu-button ui-sref="app.snacks">과자</md-sidemenu-button>
+                        </div>
+                        <div layout="row">
+                            <md-icon md-svg-src="icons/perm_identity_black_24dp.svg"></md-icon>
+                            <md-sidemenu-button ui-sref="app.currencies">통화</md-sidemenu-button>
+                        </div>
+                    <!--</md-sidemenu-content>-->
+                </md-sidemenu-group>
+            </md-sidemenu>
+        </div>
+        <div flex="90" ui-view="content">1</div>
+    </div>
+</div>

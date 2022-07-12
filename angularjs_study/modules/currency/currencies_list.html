@@ -1,0 +1,41 @@
+<div layout="row" layout-align="center">
+    <div flex="50">
+        <md-card>
+            <md-table-container>
+                <table md-table class="currency_list" md-progress="loading">
+                    <thead md-head md-order="query.order">
+                        <tr md-row>
+                            <th md-column md-order-by="code">Code</th>
+                            <th md-column md-order-by="num">Num</th>
+                            <th md-column md-order-by="memo">Memo</th>
+                        </tr>
+                    </thead>
+                    <tbody md-body>
+                        <tr md-row ng-repeat="data in currencyList | limitTo: query.limit : (query.currentPage -1) * query.limit | orderBy:query.order" md-row-select="false"
+                            ng-click="selectCurrency(data, $index)">
+                            <td md-cell class="code">
+                                {{data.code}}
+                            </td>
+                            <td md-cell class="num">
+                                {{data.num}}
+                            </td>
+                            <td md-cell class="memo">
+                                {{data.memo}}
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </md-table-container>
+            <md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.currentPage"
+                md-total="{{currencyListCount}}" md-on-paginate="currencyList" md-page-select="options.pageSelect">
+            </md-table-pagination>
+            <md-button class="md-primary" ng-click="insert()">추가</md-button>
+            <!--<md-button class="md-primary" ng-click="userSelected(selected)" ui-sref="app.users.detail">
+                see details</md-button>-->
+        </md-card>
+    </div>
+    <div flex="50">
+        <div ui-view="detail"></div>
+    </div>
+</div>

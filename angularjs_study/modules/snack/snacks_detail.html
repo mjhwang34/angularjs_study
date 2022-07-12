@@ -1,0 +1,28 @@
+<md-card>
+    <md-card>
+        <md-content layout="column" layout-padding>
+            <div>
+              <md-input-container class="md-block">
+                <label>Item Id</label>
+                <input ng-model="selectedSnackInfo.itemId" ng-readonly="mode">
+              </md-input-container>
+        
+              <md-input-container class="md-block">
+                <label>Item Name</label>
+                <input ng-model="selectedSnackInfo.itemName" ng-readonly="mode">
+              </md-input-container>
+
+              <md-input-container class="md-block">
+                <label>Calories</label>
+                <input ng-model="selectedSnackInfo.calories" ng-readonly="mode">
+              </md-input-container>
+            </div>
+          </md-content>
+    </md-card>
+
+
+    <md-button ng-if="mode" class="md-primary" ng-click="modify()">수정</md-button>
+    <md-button ng-if="!mode" class="md-warn" ng-click="save()">저장</md-button>
+    <md-button ng-if="!mode" class="md-primary" ng-click="cancel()">취소</md-button>
+    <md-button class="md-primary" ng-click="close()">닫기</md-button>
+</md-card>

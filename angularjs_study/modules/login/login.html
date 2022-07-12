@@ -1,0 +1,43 @@
+<!--login.html-->
+<div class="login-full-page" layout="column" layout-align="center">
+    <div layout="row" layout-align="center">
+        <md-card class="login-card">
+            <md-card-title>
+                <md-card-title-text layout="column">
+                    <md-card-title-text layout="row" layout-align="center">
+                        <span class="md-headline">{{'headline' | translate}}</span>
+                    </md-card-title-text>
+                    <md-card-title-text layout="row" layout-align="center">
+                        <span class="md-subhead">{{'subhead' | translate}}</span>
+                    </md-card-title-text>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <form name="userForm" novalidate>
+                    <div layout="column">
+                        <md-input-container>
+                            <!-- Use floating label instead of placeholder -->
+                            <label>{{'username' | translate}}</label>
+                            <md-icon md-svg-src="icons/perm_identity_black_24dp.svg"></md-icon>
+                            <input name="userName" ng-model="user.userName" type="text" maxlength="10" required>
+                        </md-input-container>
+                        <md-input-container>
+                            <!-- Use floating label instead of placeholder -->
+                            <label>{{'password' | translate}}</label>
+                            <md-icon md-svg-src="icons/lock_black_24dp.svg"></md-icon>
+                            <input name="password" ng-model="user.password" type="password" maxlength="10" required>
+                        </md-input-container>
+                    </div>
+                </form>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="center">
+                <md-button ng-click="submitForm(user)" class="md-warn md-raised md-hue-1">
+                    {{'login' | translate}}</md-button>
+            </md-card-actions>
+            <md-card-actions layout="row" layout-align="center">
+                <md-button ng-click="changeLanguage('en')"  class="md-primary">English</md-button>
+                <md-button ng-click="changeLanguage('ko')"  class="md-primary">한국어</md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</div>

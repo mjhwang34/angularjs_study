@@ -1,0 +1,27 @@
+<md-card>
+    <md-card>
+        <md-content layout="column" layout-padding>
+            <div>
+              <md-input-container class="md-block">
+                <label>Code</label>
+                <input ng-model="selectedCurrencyInfo.code" ng-readonly="modeAdd">
+              </md-input-container>
+        
+              <md-input-container class="md-block">
+                <label>Num</label>
+                <input ng-model="selectedCurrencyInfo.num" ng-readonly="modeAdd">
+              </md-input-container>
+
+              <md-input-container class="md-block">
+                <label>Memo</label>
+                <input ng-model="selectedCurrencyInfo.memo" ng-readonly="mode">
+              </md-input-container>
+            </div>
+          </md-content>
+    </md-card>
+    <md-button ng-if="!mode" class="md-warn" ng-click="save()">저장</md-button>
+    <md-button ng-if="mode" class="md-primary" ng-click="modify()">수정</md-button>
+    <md-button ng-if="(!mode)&&modeAdd" class="md-primary" ng-click="reset()">초기화</md-button>
+    <md-button ng-if="mode" class="md-warn" ng-click="delete()">삭제</md-button>
+    <md-button class="md-primary" ng-click="close()">닫기</md-button>
+</md-card>

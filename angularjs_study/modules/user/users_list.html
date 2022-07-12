@@ -1,0 +1,48 @@
+<div layout="row" layout-align="center">
+    <div flex="50">
+        <md-card>
+            <md-table-container>
+                <table md-table class="user_list">
+                    <thead md-head md-order="query.order">
+                        <tr md-row>
+                            <th md-column md-order-by="userName">UserName</th>
+                            <th md-column md-order-by="age">age</th>
+                        </tr>
+                    </thead>
+                    <tbody md-body>
+                        <tr md-row ng-repeat="data in userList | limitTo: query.limit : (query.currentPage -1) * query.limit | orderBy:query.order" md-row-select="false"
+                            ng-click="selectUser(data, $index)">
+                            <td md-cell class="name">
+                                {{data.userName}}
+                            </td>
+                            <td md-cell class="age">
+                                {{data.age}}
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    <!--
+                    <tbody md-body>
+                        <tr md-row md-select="data" md-select-id="name" md-auto-select ng-repeat="data in userList">
+                            <td md-cell class="list-table-items">
+                                <div layout="row" layout-align="center center">
+                                    <md-button ng-click="userSelected(data)" ui-sref="app.users.detail">
+                                        {{data.userName}}</md-button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    -->
+                </table>
+            </md-table-container>
+            <md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.currentPage"
+                md-total="{{userListCount}}" md-on-paginate="userList" md-page-select="options.pageSelect">
+            </md-table-pagination>
+            <!--<md-button class="md-primary" ng-click="userSelected(selected)" ui-sref="app.users.detail">
+                see details</md-button>-->
+        </md-card>
+    </div>
+    <div flex="50">
+        <div ui-view="detail"></div>
+    </div>
+</div>

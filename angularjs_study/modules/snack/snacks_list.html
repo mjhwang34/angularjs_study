@@ -1,0 +1,35 @@
+<div layout="row" layout-align="center">
+    <div flex="50">
+        <md-card>
+            <md-table-container>
+                <table md-table class=snack_list>
+                    <thead md-head md-order="query.order">
+                        <tr md-row>
+                            <th md-column md-order-by="itemId">Item Id</th>
+                            <th md-column md-order-by="itemName">Item Name</th>
+                        </tr>
+                    </thead>
+                    <tbody md-body>
+                        <tr md-row ng-repeat="data in snackList | limitTo: query.limit : (query.currentPage -1) * query.limit | orderBy:query.order" md-row-select="false"
+                            ng-click="selectSnack(data, $index)">
+                            <td md-cell class="itemId">
+                                {{data.itemId}}
+                            </td>
+                            <td md-cell class="itemName">
+                                {{data.itemName}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </md-table-container>
+            <md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.currentPage"
+                md-total="{{snackListCount}}" md-on-paginate="snackList" md-page-select="options.pageSelect">
+            </md-table-pagination>
+            <!--<md-button class="md-primary" ng-click="snackSelected(selected)" ui-sref="app.snacks.detail">
+                see details</md-button>-->
+        </md-card>
+    </div>
+    <div flex="50">
+        <div ui-view="detail"></div>
+    </div>
+</div>
